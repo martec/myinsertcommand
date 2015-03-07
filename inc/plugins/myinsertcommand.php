@@ -19,7 +19,7 @@ if(!defined("IN_MYBB"))
 	die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
 }
 
-define('MIC_PLUGIN_VER', '1.0.0');
+define('MIC_PLUGIN_VER', '1.0.1');
 
 function myinsertcommand_info()
 {
@@ -112,8 +112,8 @@ if (!'{\$mybb->settings['myinsertcommand_rules']}'.trim() == ''){
 
 	find_replace_templatesets(
 		'codebuttons',
-		'#' . preg_quote('quote|') . '#i',
-		'quote|"+insertbutton+"'
+		'#' . preg_quote('maximize,') . '#i',
+		'"+insertbutton+"maximize,'
 	);
 
 	if ($plugins_cache['active']['quickadveditorplus'] or $plugins_cache['active']['quickadveditor']) {
@@ -138,8 +138,8 @@ if (!'{\$mybb->settings['myinsertcommand_rules']}'.trim() == ''){
 
 		find_replace_templatesets(
 			'codebutquick',
-			'#' . preg_quote('quote|') . '#i',
-			'quote|"+insertbutton+"'
+			'#' . preg_quote('maximize,') . '#i',
+			'"+insertbutton+"maximize,'
 		);
 
 		find_replace_templatesets(
@@ -163,8 +163,8 @@ if (!'{\$mybb->settings['myinsertcommand_rules']}'.trim() == ''){
 
 		find_replace_templatesets(
 			'codebutquick_pm',
-			'#' . preg_quote('quote|') . '#i',
-			'quote|"+insertbutton+"'
+			'#' . preg_quote('maximize,') . '#i',
+			'"+insertbutton+"maximize,'
 		);
 	}
 }
@@ -195,8 +195,8 @@ if (!'{\$mybb->settings['myinsertcommand_rules']}'.trim() == ''){
 
 	find_replace_templatesets(
 		'codebuttons',
-		'#' . preg_quote('quote|"+insertbutton+"') . '#i',
-		'quote|'
+		'#' . preg_quote('"+insertbutton+"maximize,') . '#i',
+		'maximize,'
 	);
 
 	if ($plugins_cache['active']['quickadveditorplus'] or $plugins_cache['active']['quickadveditor']) {
@@ -221,8 +221,8 @@ if (!'{\$mybb->settings['myinsertcommand_rules']}'.trim() == ''){
 
 		find_replace_templatesets(
 			'codebutquick',
-			'#' . preg_quote('quote|"+insertbutton+"') . '#i',
-			'quote|'
+			'#' . preg_quote('"+insertbutton+"maximize,') . '#i',
+			'maximize,'
 		);
 
 		find_replace_templatesets(
@@ -246,8 +246,8 @@ if (!'{\$mybb->settings['myinsertcommand_rules']}'.trim() == ''){
 
 		find_replace_templatesets(
 			'codebutquick_pm',
-			'#' . preg_quote('quote|"+insertbutton+"') . '#i',
-			'quote|'
+			'#' . preg_quote('"+insertbutton+"maximize,') . '#i',
+			'maximize,'
 		);		
 	}
 }
