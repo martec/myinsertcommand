@@ -58,7 +58,7 @@ function insertcommand(newcmd) {
 					end	   = null;
 				}
 
-				editor.insert(before, end);
+				editor.insertText(before, end);
 				editor.closeDropDown(true);
 				e.preventDefault();
 			});
